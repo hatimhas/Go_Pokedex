@@ -22,3 +22,7 @@ func NewClient(timeout, cacheInterval time.Duration) Client {
 		},
 	}
 }
+
+func (c *Client) PrintCache() {
+	c.cache.Print()
+}

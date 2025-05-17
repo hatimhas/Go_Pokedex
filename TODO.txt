@@ -1,0 +1,10 @@
+Create Explore coommand
+1. Create explore_cmd.go
+  - Create Explore function, accept params location-area name / location-area id
+    - Check if in cache the data or location area/id url (as key)
+      - if cache exists, get the data and marshal/unmarshal it, into struct in type_locations.go
+      else 
+        -make GET req with new url
+        -marshal/unmarshal the data into struct in type_locations.go
+    - display pokemon names on terminal
+
