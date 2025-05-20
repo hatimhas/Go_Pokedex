@@ -20,9 +20,7 @@ func commandCatch(cfg *config, pokemonName ...string) error {
 	fmt.Println("Base XP: " + fmt.Sprint(pokemonBaseXP))
 	if utils.CatchRateCalc(pokemonBaseXP) {
 		fmt.Println("Caught " + pokemonNameResp.Name + "!")
-		cfg.pokeDex[pokemonNameResp.Name] = Pokemon{
-			pokeInfo: pokemonNameResp,
-		}
+		cfg.pokeDex[pokemonNameResp.Name] = pokemonNameResp
 		return nil
 
 	} else {
