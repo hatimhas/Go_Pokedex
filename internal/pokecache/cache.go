@@ -74,7 +74,7 @@ func (c *Cache) Print() {
 	}
 
 	fmt.Println("Cache contents:")
-	for key, entry := range c.cache {
-		fmt.Printf("Key: %s\nCreated At: %s\nValue: %s\n\n", key, entry.createdAt.Format(time.RFC3339), string(entry.val))
+	for key := range c.cache {
+		fmt.Printf("URLs: %s\n", key)
 	}
 }
